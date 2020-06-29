@@ -1,16 +1,23 @@
 import React from "react";
+import CoolButton from './CoolButton'
+
 
 const FormField = (props) => {
-  console.log(props);
+
+
   return (
-    <div>{props.juan}</div>
-    // <div className="field">
-    //   <label className="label">{props.label}</label>
-    //   <div className="control">
-    //     <input className="input" type="text" placeholder="e.g Alex Smith" />
-    //   </div>
-    // </div>
+    <div className="field">
+      <label className="label" onClick={() => alertLabel(props.label)} >{props.label}</label>
+      <div className="control">
+        <input className="input" type="text" placeholder={props.placeholder} />
+      </div>
+    </div>
   );
 };
 
 export default FormField;
+
+
+function alertLabel(label){
+  alert(label)
+}
